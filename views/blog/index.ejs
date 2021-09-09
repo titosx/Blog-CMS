@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/blog/style.css">
+    <title>Blog</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <div class="nav mb-4">
+        <h2 class="ms-3 p-3"><a href="/">Blog</a></h1>
+    </div>
+    
+    <main class="container">
+        <div class="row justify-content-md-center">
+            
+            <% if (posts.length === 0) { %>
+                <h4> There are no posts.</h4>
+            <% } %>
+            
+            <% for (let i=posts.length-1; i>=0; i--) { %> 
+                <div class="col-12 col-sm-12 col-md-10 col-lg-7">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <a href="/posts/<%= posts[i]._id %>">
+                                <h4 class="card-title"><%= posts[i].title %> </h4>
+                            </a>
+                            <img class="card-img mt-2" src="<%= posts[i].image %> ">
+                            <a href="/posts/<%= posts[i]._id %>" class="btn btn-primary mt-3">Read More</a>
+                        </div>
+                        <div class="card-footer text-muted d-flex justify-content-between bg-transparent">
+                            <% const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; %> 
+                            <div class="views">
+                                <%= months[posts[i].createdAt.getMonth()] %> <%= posts[i].createdAt.getDate() %>, <%= posts[i].createdAt.getHours() %>:<%= posts[i].createdAt.getMinutes() %>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            <% } %> 
+        </div>
+    </main>
+
+    <div class="footer mt-auto">
+        <div class="text-center p-3">
+            Copyright 2021 ©
+            <a class="text-dark" href="/">Blog</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+.card-img {
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+}
+
+.nav {
+    background-color: rgba(0, 0, 0, 0.09);
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #000;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.09);
+}
+
+
+@media screen and (max-width: 1200px) {
+    .card-img {
+        height: 28vw;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .card-img {
+        height: 30vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card-img {
+        height: 34vw;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .card-img {
+        height: 55vw;
+    }
+}

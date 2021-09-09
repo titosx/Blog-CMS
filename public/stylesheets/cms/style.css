@@ -1,0 +1,105 @@
+.sidebar {
+    color: #f7f7f7;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden; 
+    
+}
+
+main {
+    margin-left: 250px;
+    padding-left: 20px;
+    height: 100%;
+}
+
+.sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #c5c5c5 !important;
+}
+
+.posts {
+    margin-left: 20%;
+}
+
+.footer {
+    margin-left: 250px;
+}
+
+#editBtn {
+    max-height: 38px;
+}
+
+@media screen and (max-width: 1200px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    main {
+        margin-left: 200px;
+    }
+
+    .footer {
+        margin-left: 200px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    main {
+        margin-left: 150px;
+    }
+
+    .footer {
+        margin-left: 150px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #editBtn {
+        margin-left: 1em;
+        
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar {
+        width: 120px;
+    }
+
+    main {
+        margin-left: 120px;
+    }
+
+    .card-title {
+        font-size: 1em;
+    }
+
+    #editTitle {
+        font-size: 1.2em;
+    }
+
+    .footer {
+        margin-left: 120px;
+    }
+
+    #date {
+        font-size: 0.8em;
+    }
+
+    #editBtn, #delBtn {
+        font-size: 0.8em;
+    }
+}
